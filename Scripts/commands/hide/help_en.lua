@@ -1,4 +1,4 @@
 return {
-  _ = "Hide terrain",
+  _ = "Hide terrain.",
   all = "Hide terrain and vegetation."
 }
