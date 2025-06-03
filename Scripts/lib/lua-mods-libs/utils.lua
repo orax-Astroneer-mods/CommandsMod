@@ -43,11 +43,11 @@ function M.getModInfo(info)
 
   ---@type Mod_ModInfo
   return {
-    name = source:match("@?.+\\Mods\\([^\\]+)"),
+    name = source:match("@?.+\\([^\\]+)\\[Ss]cripts\\"),
     file = source:sub(2),
     currentDirectory = source:match("@?(.+)\\"),
-    currentModDirectory = source:match("@?(.+\\Mods\\[^\\]+)"),
-    modsDirectory = source:match("@?(.+\\Mods)\\")
+    currentModDirectory = source:match("@?(.+)\\[Ss]cripts\\"),
+    modsDirectory = source:match("@?(.+)\\[^\\]+\\[Ss]cripts\\")
   }
 end
 
@@ -134,7 +134,7 @@ function M.getEnabledModsList()
   local fileList = M.getFileList(M.mod.modsDirectory, "enabled.txt")
 
   for _, v in ipairs(fileList) do
-    local modName = string.match(v, "Mods\\([^\\]+)\\enabled%.txt")
+    local modName = string.match(v, "\\([^\\]+)\\enabled%.txt")
     if modName ~= nil then
       enabledMods[modName] = true
     end
@@ -147,7 +147,7 @@ end
 ---@return string
 ---@nodiscard
 function M.getRelPathToModsDir(path)
-  local relPath, _ = path:gsub("@?.+\\Mods\\", "")
+  local relPath, _ = path:gsub("(@?.+\\)[^\\]+\\[Ss]cripts\\", "")
 
   return relPath
 end

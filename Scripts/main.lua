@@ -1,7 +1,7 @@
 ---@class FOutputDevice
 ---@field Log function
 
-local currentModDirectory = debug.getinfo(1, "S").source:match("@?(.+\\Mods\\[^\\]+)")
+local currentModDirectory = debug.getinfo(1, "S").source:match("@?(.+)\\[Ss]cripts\\")
 _G.CurrentModDirectory = currentModDirectory
 
 local Commands = {
