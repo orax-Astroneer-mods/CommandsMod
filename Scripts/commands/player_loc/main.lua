@@ -3,8 +3,8 @@
 ---@field rot FRotator
 
 local UEHelpers = require("UEHelpers")
-local serpent = require("lib.serpent.serpent")
-local func = require("func")
+local serpent = require("Scripts.lib.serpent.serpent")
+local func = require("Scripts.func")
 
 local log = _G.Log
 local format = string.format

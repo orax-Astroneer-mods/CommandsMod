@@ -3,7 +3,7 @@ local log = _G.Log
 local format = string.format
 
 local UEHelpers = require("UEHelpers")
-local serpent = require("lib.serpent.serpent")
+local serpent = require("Scripts.lib.serpent.serpent")
 
 local CurrentModDirectory = _G.CurrentModDirectory
 local ParamsFileName = "params.lua"
@@ -12,7 +12,7 @@ local ScriptName = nil
 local m = {}
 
 local function getScriptName()
-    local scriptName = ScriptName or debug.getinfo(4, "S").source:match("@?\\([^\\]+)\\main%.lua$")
+    local scriptName = ScriptName or debug.getinfo(4, "S").source:gsub("\\", "/"):match("@?/([^/]+)/main%.lua$")
     ScriptName = scriptName
     return scriptName
 end

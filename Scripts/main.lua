@@ -1,7 +1,7 @@
 ---@class FOutputDevice
 ---@field Log function
 
-local currentModDirectory = debug.getinfo(1, "S").source:match("@?(.+)\\[Ss]cripts\\")
+local currentModDirectory = debug.getinfo(1, "S").source:gsub("\\", "/"):match("@?(.+)/[Ss]cripts/")
 _G.CurrentModDirectory = currentModDirectory
 
 local Commands = {
@@ -10,8 +10,8 @@ local Commands = {
 }
 
 local UEHelpers = require("UEHelpers")
-local utils = require("lib.lua-mods-libs.utils")
-local logging = require("lib.lua-mods-libs.logging")
+local utils = require("Scripts.lib.lua-mods-libs.utils")
+local logging = require("Scripts.lib.lua-mods-libs.logging")
 
 local format = string.format
 
@@ -114,7 +114,7 @@ local function loadCommands()
     local commands = {}
 
     for index, file in ipairs(fileList) do
-        local commandName = file:match("\\([^\\]+)\\main%.lua$")
+        local commandName = file:gsub("\\", "/"):match("/([^/]+)/main%.lua$")
         local commandOptions = options.commands[commandName]
 
         if commandOptions == nil then

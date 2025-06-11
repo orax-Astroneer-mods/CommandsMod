@@ -1,7 +1,7 @@
 local log = Log
 local format = string.format
 local UEHelpers = require("UEHelpers")
-local cmdHelpers = require("cmdHelpers")
+local cmdHelpers = require("Scripts.cmdHelpers")
 
 local cmdSharedOptions = _G.SHARED_CMD_OPTIONS
 
@@ -10,7 +10,7 @@ local cmdOptions, extraOptions = cmdHelpers.loadCommandOptions(CommandName)
 ---@cast extraOptions CommandsMod_Commands_Options_Extra__saves
 
 local function getSaveName()
-    local saveGames = extraOptions.directory .. "\\" .. extraOptions.filter
+    local saveGames = extraOptions.directory .. "/" .. extraOptions.filter
     local handle = io.popen(string.format('dir "%s" /B /O:-D', saveGames))
     if handle then
         local fileName = handle:lines()() ---@type string

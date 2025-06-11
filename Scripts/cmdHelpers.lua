@@ -1,6 +1,6 @@
 local log = Log
 local format = string.format
-local f = require("func")
+local f = require("Scripts.func")
 
 local m = {}
 
@@ -77,7 +77,7 @@ function m.execute(__f, cmdOptions, parameters, outputDevice)
 end
 
 function m.getCurrentCommandName()
-    return debug.getinfo(2, "S").source:match("@?.+\\([^\\]+)\\")
+    return debug.getinfo(2, "S").source:gsub("\\", "/"):match("@?.+/([^/]+)/")
 end
 
 ---Load options file for the current command.
