@@ -362,6 +362,7 @@ function M.getFileList(directory, filter)
   local fileList = {}
 
   for fileName in io.popen(string.format('dir "%s" /B /S', directory)):lines() do
+    fileName = fileName:gsub("\\", "/")
     if fileName:match(filter) then
       table.insert(fileList, fileName)
     end
