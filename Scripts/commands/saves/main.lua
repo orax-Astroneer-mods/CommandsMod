@@ -1,7 +1,7 @@
 local log = Log
 local format = string.format
 local UEHelpers = require("UEHelpers")
-local cmdHelpers = require("Scripts.cmdHelpers")
+local cmdHelpers = require("cmdHelpers")
 
 local cmdSharedOptions = _G.SHARED_CMD_OPTIONS
 

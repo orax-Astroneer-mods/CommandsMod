@@ -1,6 +1,6 @@
 local log = Log
 local format = string.format
-local f = require("Scripts.func")
+local f = require("func")
 
 local m = {}
 

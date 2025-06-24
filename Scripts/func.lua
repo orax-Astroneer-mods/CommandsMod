@@ -3,7 +3,7 @@ local log = _G.Log
 local format = string.format
 
 local UEHelpers = require("UEHelpers")
-local serpent = require("Scripts.lib.serpent.serpent")
+local serpent = require("lib.serpent.serpent")
 
 local CurrentModDirectory = _G.CurrentModDirectory
 local ParamsFileName = "params.lua"

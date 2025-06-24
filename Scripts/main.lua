@@ -10,8 +10,8 @@ local Commands = {
 }
 
 local UEHelpers = require("UEHelpers")
-local utils = require("Scripts.lib.lua-mods-libs.utils")
-local logging = require("Scripts.lib.lua-mods-libs.logging")
+local utils = require("lib.lua-mods-libs.utils")
+local logging = require("lib.lua-mods-libs.logging")
 
 local format = string.format
 
