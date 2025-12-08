@@ -73,6 +73,8 @@ return {
 
     quit_game = {
       aliases = { "qg" }
+    },
+    creative = {
     }
   }
 }
