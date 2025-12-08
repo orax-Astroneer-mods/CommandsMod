@@ -1,6 +1,7 @@
 local cmdOptions = _G.SHARED_CMD_OPTIONS ---@cast cmdOptions CommandsMod_Shared_Commands_Options
 local log = _G.Log
 local format = string.format
+local sqrt = math.sqrt
 
 local UEHelpers = require("UEHelpers")
 local serpent = require("lib.serpent.serpent")
@@ -26,6 +27,13 @@ function m.mergeTables(t1, t2)
     end
 
     return t1
+end
+
+--- Get the length of a vector.
+---@param u FVector
+---@return number len
+function m.getVectorLen(u)
+    return sqrt(u.X * u.X + u.Y * u.Y + u.Z * u.Z)
 end
 
 ---@param v FVector
