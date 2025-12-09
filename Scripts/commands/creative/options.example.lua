@@ -7,8 +7,8 @@ local opt = {
         off = {
             aliases = { "0" }
         },
-        on_with_achievement = {
-            aliases = { "on-with-achievement", "wa", "w/a" }
+        on_with_achievements = {
+            aliases = { "on-with-achievements", "wa", "w/a" }
         },
     }
 }
