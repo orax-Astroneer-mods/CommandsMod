@@ -28,3 +28,16 @@
 ---@field parameters table?
 ---@field key Key
 ---@field modifierKeys ModifierKey[]?
+
+--------------------------------------------------
+
+---@class CommandsMod_Shared__AstroGameState
+---@field IsCatalogUnlockedCreative boolean
+---@field IsOxygenFreeCreative boolean
+---@field IsInvincibleCreative boolean
+---@field IsBackpackPowerUnlimitedCreative boolean
+---@field IsInvisibleToHazardsCreative boolean
+---@field IsFuelFreeCreative boolean
+
+---@class CommandsMod_Shared__PlayController
+---@field IsCreativeCollectResourcesWhileDeformingDisabled boolean

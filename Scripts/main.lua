@@ -4,6 +4,8 @@
 local currentModDirectory = debug.getinfo(1, "S").source:gsub("\\", "/"):match("@?(.+)/[Ss]cripts/")
 _G.CurrentModDirectory = currentModDirectory
 
+_G.SHARED = {}
+
 local Commands = {
     enable_move = { "enable_move" },
     hide_planet = { "hide_planet" }
