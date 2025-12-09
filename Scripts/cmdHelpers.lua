@@ -57,7 +57,7 @@ function m.execute(__f, cmdOptions, parameters, outputDevice)
     end
 
     -- The function was not found with this name,
-    -- try to ind if the name is an alias.
+    -- try to find if the name is an alias.
     for mainParamName, params in pairs(cmdOptions.params) do
         if isAliasOf(param, params) then
             if type(__f[mainParamName]) == "function" then
@@ -65,7 +65,7 @@ function m.execute(__f, cmdOptions, parameters, outputDevice)
                 __f[mainParamName](parameters)
                 return true
             else
-                log.warn("Function %q is not implemented.")
+                log.warn("Function %q is not implemented.", param)
                 return false
             end
         end
