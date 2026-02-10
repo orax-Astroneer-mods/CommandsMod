@@ -1,0 +1,13 @@
+{
+  "mods": {
+    "CommandsMod": {
+      "latest_version": "0.2.1",
+      "versions": {
+        "0.2.1": {
+          "download_url": "https://github.com/orax-Astroneer-mods/CommandsMod/releases/download/v0.2.1/000-CommandsMod-0.2.1_P.pak",
+          "filename": "000-CommandsMod-0.2.1_P.pak"
+        }
+      }
+    }
+  }
+}
