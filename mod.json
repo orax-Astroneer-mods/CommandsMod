@@ -1,7 +1,6 @@
 {
     "$schema": "./resources/schema.json",
     "author": "orax",
-    "canonical_name": "Commands",
     "description": "Add some commands. Hide (hide terrain), pause, quit, player_loc (save/load a player location; teleport), saves (load latest save).",
     "homepage": "https://www.nexusmods.com/profile/0R4X/mods?gameId=1955",
     "name": "Commands"
