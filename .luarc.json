@@ -5,11 +5,14 @@
         "TestsMod"
     ],
     "diagnostics.libraryFiles": "Disable",
+    "diagnostics.ignoredFiles": "Disable",
     "workspace.ignoreDir": [
-        ".vscode"
+        ".vscode",
+        "Scripts/lib"
     ],
     "workspace.library": [
-        "../shared"
+        "../shared",
+        "Scripts/lib"
     ],
     "workspace.maxPreload": 50000,
     "workspace.preloadFileSize": 5000
